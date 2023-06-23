@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>认识二叉树 - Hao&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hao&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hao&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="回忆二叉树的概念，了解二叉树这个数据结构"><meta property="og:type" content="blog"><meta property="og:title" content="认识二叉树"><meta property="og:url" content="https://leihao168.top/2023/04/11/%E4%BA%8C%E5%8F%89%E6%A0%91_01_%E8%AE%A4%E8%AF%86%E4%BA%8C%E5%8F%89%E6%A0%91/"><meta property="og:site_name" content="Hao&#039;s Blog"><meta property="og:description" content="回忆二叉树的概念，了解二叉树这个数据结构"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img0.baidu.com/it/u=2749986697,1575077798&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=944&amp;h=500"><meta property="article:published_time" content="2023-04-11T00:00:00.000Z"><meta property="article:modified_time" content="2023-06-23T10:21:41.139Z"><meta property="article:author" content="冲锋皓"><meta property="article:tag" content="Java"><meta property="article:tag" content="数据结构与算法"><meta property="article:tag" content="二叉树"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://img0.baidu.com/it/u=2749986697,1575077798&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=944&amp;h=500"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://leihao168.top/2023/04/11/%E4%BA%8C%E5%8F%89%E6%A0%91_01_%E8%AE%A4%E8%AF%86%E4%BA%8C%E5%8F%89%E6%A0%91/"},"headline":"认识二叉树","image":[],"datePublished":"2023-04-11T00:00:00.000Z","dateModified":"2023-06-23T10:21:41.139Z","author":{"@type":"Person","name":"冲锋皓"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":{"text":"Hao's Blog"}}},"description":"回忆二叉树的概念，了解二叉树这个数据结构"}</script><link rel="canonical" href="https://leihao168.top/2023/04/11/%E4%BA%8C%E5%8F%89%E6%A0%91_01_%E8%AE%A4%E8%AF%86%E4%BA%8C%E5%8F%89%E6%A0%91/"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Hao&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://img0.baidu.com/it/u=2749986697,1575077798&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=944&amp;h=500" alt="认识二叉树"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-11T00:00:00.000Z" title="4/11/2023, 8:00:00 AM">2023-04-11</time>发表</span><span class="level-item"><time dateTime="2023-06-23T10:21:41.139Z" title="6/23/2023, 6:21:41 PM">2023-06-23</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></span><span class="level-item">15 分钟读完 (大约2185个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">认识二叉树</h1><div class="content"><blockquote>
+<p>二叉树是一种常见的数据结构，它由节点组成，每个节点最多只有两个子节点。相对于数组和链表等线性存储结构，二叉树更符合人类思维的想象模型，能够提高程序的可读性和执行效率。因此，学习二叉树对于软件开发者来说非常必要。<br>本文将介绍二叉树的基本概念和操作，通过阅读本文，读者将深入了解二叉树的特点和应用，掌握二叉树的基本用法，进而提高编程技能。</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="一、什么是二叉树？"><a href="#一、什么是二叉树？" class="headerlink" title="一、什么是二叉树？"></a>一、什么是二叉树？</h1><h2 id="1-1-认识二叉树"><a href="#1-1-认识二叉树" class="headerlink" title="1.1 认识二叉树"></a>1.1 认识二叉树</h2><ul>
+<li>二叉树是一种常用的树形结构，由节点和边组成，其中每个节点<strong>最多</strong>有两个子节点，分别称为左子节点和右子节点。</li>
+<li>下图就是一个简单的结构示例：<img src="https://img1.baidu.com/it/u=1379461701,3369029753&fm=253&fmt=auto&app=138&f=JPEG?w=574&h=500"></li>
+</ul>
+<p>按照二叉树的严格定义，以下的基本条件必须满足：</p>
+<ol>
+<li>每个节点最多只能有两个子节点。</li>
+<li>每个节点的子节点可以为空，但不能超过两个。</li>
+<li>一棵二叉树的根节点只能有一个，而且每个节点最多只能有一个父节点。</li>
+<li>任意一个节点的左子树和右子树都是一棵二叉树，也就是说，每个子树本身也必须是一棵严格的二叉树。</li>
+</ol>
+<p>说明一下：”<strong>每个子树本身也是一棵严格的二叉树</strong>“和”<strong>一棵二叉树的根节点只能有一个</strong>“并不冲突，只要谈论的是<strong>一颗</strong>二叉树，那么他的根节点就只能有且只有一个！</p>
+<h2 id="1-2-二叉树定义相关的名词解释"><a href="#1-2-二叉树定义相关的名词解释" class="headerlink" title="1.2 二叉树定义相关的名词解释"></a>1.2 二叉树定义相关的名词解释</h2><ol>
+<li><strong>节点</strong>：二叉树中的每个元素称为一个节点，它用来存储数据和指向其他节点的指针。</li>
+<li><strong>父节点</strong>：一个节点所指向的直接上级节点被称为该节点的父节点，如果一个节点没有父节点，则该节点称为根节点。</li>
+<li><strong>子节点</strong>：一个节点所指向的直接下级节点被称为该节点的子节点。</li>
+<li><strong>叶子节点</strong>：没有子节点的节点被称为叶子节点，也称为终端节点或者外部节点。</li>
+<li><strong>内部节点</strong>：除了叶子节点之外的所有节点都被称为内部节点，也称为非终端节点或者分支节点。</li>
+<li><strong>节点的度</strong>：节点所拥有的子节点数目称为该节点的度，叶子节点的度为0。</li>
+<li><strong>深度</strong>：从根节点到某个节点所经过的<font color="FF0000">边的数目</font>称为该节点的深度，根节点的深度为0。</li>
+<li><strong>高度</strong>：从某个节点到其最远叶子节点所经过的边的数目称为该节点的高度，叶子节点的高度为0。</li>
+</ol>
+<p><font color="FF0000">深度</font>的概念非常重要，使用得也最多，一定要充分理解！</p>
+<h1 id="二、二叉树的分类"><a href="#二、二叉树的分类" class="headerlink" title="二、二叉树的分类"></a>二、二叉树的分类</h1><p>为了更好的描述和使用二叉树，二叉树按照各自的特点和性质又被分为了几类。</p>
+<h2 id="2-1-普通二叉树"><a href="#2-1-普通二叉树" class="headerlink" title="2.1 普通二叉树"></a>2.1 普通二叉树</h2><ul>
+<li>也就是最基本的二叉树结构，它简单、灵活，可以用来存储和处理各种类型的数据。但它的性能可能差于其他类型的二叉树，因为在普通二叉树中，某个节点的度可以为0、1或2，因此存在一些无用的节点，会严重影响搜索的效率。</li>
+<li>当然，所有的二叉树都是普通二叉树的一种，普通二叉树也被称为不完全二叉树或自由二叉树。<img src="https://i.postimg.cc/brBxBvVT/putong.gif"></li>
+</ul>
+<h2 id="2-2-满二叉树"><a href="#2-2-满二叉树" class="headerlink" title="2.2 满二叉树"></a>2.2 满二叉树</h2><ul>
+<li>满二叉树的概念也比较好理解，顾名思义，满二叉树之所以称为满二叉树，原因就在于它的<strong>所有分支节点都拥有左、右两个子节点</strong>。</li>
+<li>作为一种特殊的二叉树，它们的节点个数和树的高度之间存在一定的关系，因此对一些算法和数据结构有特定的优化作用。<img src="https://img2.baidu.com/it/u=600079792,1607039672&fm=253&fmt=auto&app=138&f=JPEG?w=490&h=339"></li>
+</ul>
+<h2 id="2-3-完全二叉树"><a href="#2-3-完全二叉树" class="headerlink" title="2.3 完全二叉树"></a>2.3 完全二叉树</h2><ul>
+<li>在一棵二叉树中，如果除了最后一层以外，其他层都被完全<strong>填满</strong>，且<font color="FF0000">最后一层从左到右填充</font>，则这棵二叉树称为完全二叉树。</li>
+<li>不难发现，满二叉树和完全二叉树有一定的联系：如果一棵二叉树是满二叉树，则它一定是完全二叉树；而如果一棵二叉树是完全二叉树，但不是满二叉树，则它最后一层的节点填充顺序不一定是从左到右的。</li>
+<li>由于结构的特殊性，它同样对一些算法和数据结构有特定的优化作用。<img src="https://img2.baidu.com/it/u=1785886171,468043011&fm=253&fmt=auto&app=138&f=PNG?w=708&h=491"></li>
+</ul>
+<h2 id="2-4-二叉搜索树"><a href="#2-4-二叉搜索树" class="headerlink" title="2.4 二叉搜索树"></a>2.4 二叉搜索树</h2><ul>
+<li>一种特殊的二叉树，它要求左子节点的值小于父节点的值，右子节点的值大于父节点的值。</li>
+<li>可以提高查找、插入、删除等操作的效率。二叉搜索树已经成为一种经典的数据结构，它是许多其他数据结构设计的基础。</li>
+<li>例如：下图中，如果我们要查找”3”节点，那么可以直接判断和根节点的大小，发现”3”肯定在左子树，之后再同理判断即可，很快就可以确定”3”的位置。<img src="https://img1.baidu.com/it/u=2587374606,2461051810&fm=253&fmt=auto&app=138&f=JPEG?w=918&h=490"></li>
+</ul>
+<h1 id="三、相关计算"><a href="#三、相关计算" class="headerlink" title="三、相关计算"></a>三、相关计算</h1><h2 id="3-1-高度和层数"><a href="#3-1-高度和层数" class="headerlink" title="3.1 高度和层数"></a>3.1 高度和层数</h2><ul>
+<li>在学习公式之前，首先我们要弄清楚两个很容易混淆的概念：高度和层数</li>
+<li>在二叉树中，高度和层数是不同的概念。</li>
+</ul>
+<ol>
+<li>高度<br>高度指的是从根节点到最远叶子节点的最长路径上经过的<font color="FF0000">节点数</font>。例如，下图所示的二叉树的高度为3。</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   A</span><br><span class="line"> /   \</span><br><span class="line">B     C</span><br><span class="line">     / \</span><br><span class="line">    D   E</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>层数<br>层数表示的是节点在树中的层数，根节点的层数为1，它的子节点的层数为2，以此类推。例如，上图中，根节点A的层数为1，节点B和C的层数为2，节点D和E的层数为3。</li>
+</ol>
+<p>在二叉树的算法和数据结构中，计算二叉树高度时可能有两种不同的定义方式：</p>
+<ul>
+<li>一种是将根节点定义为第0层，从而高度为h的二叉树的最大层数为h；另一种是将根节点定义为第1层，从而高度为h的二叉树的最大层数为h+1。</li>
+<li>为了容易理解，并且和高度相匹配，在下面的公式中，我们选用将根节点定义为第1层这种方式。</li>
+</ul>
+<h2 id="3-2-常用公式"><a href="#3-2-常用公式" class="headerlink" title="3.2 常用公式"></a>3.2 常用公式</h2><ol>
+<li><p>最多节点总数<br>设二叉树的高度为h，那么它的最多节点数为：<br>$$<br>2^h-1<br>$$</p>
+</li>
+<li><p>第 k 层最多节点个数</p>
+<p>对于任意正整数 k ，第 k 层的节点数最多为：<br>$$<br>2^{k-1}<br>$$</p>
+</li>
+<li><p>度为0（即叶子节点）的节点数（n0表示度为0的节点数（即叶子节点数），n2表示度为2的非叶子节点数。）：<br>$$<br>n0=n2+1<br>$$</p>
+</li>
+<li><p>度为2的非叶子节点数：<br>$$<br>n2 = n0 - 1<br>$$</p>
+</li>
+</ol>
+<p>需要注意的是，以上公式都是建立在完全二叉树的基础上。对于普通的、不一定满足完全二叉树特征的二叉树，以上公式可能会有一定的变化或限制。</p>
+<h1 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h1><ul>
+<li>二叉树是一种重要的数据结构，在各种算法和应用中都有广泛的应用。掌握二叉树相关的基本概念、操作和扩展，能够帮助我们更好地理解和设计相关算法，并实现高效、稳定的程序。</li>
+<li>我们需要明确二叉树的基本概念，例如根节点、子节点、叶子节点、深度、高度、度数等。通过熟练掌握这些概念，我们可以更好地理解和设计二叉树相关的算法。</li>
+<li>后续还会抽时间讲一讲二叉树相关的算法题目，还有二叉树的三种常见遍历方式。</li>
+</ul>
+<p><font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font><br><img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif"></p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Java/">Java</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><a class="link-muted mr-2" rel="tag" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/04/19/%E5%AE%89%E6%A1%8C_02_OrmLite%E6%A1%86%E6%9E%B6/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">OrmLite框架的简单使用</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/04/10/Kotlin_02_Kotlin%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E6%A6%82%E8%BF%B0/"><span class="level-item">Kotlin函数式编程思想概述</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.jpeg" alt="冲锋皓"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">冲锋皓</p><p class="is-size-6 is-block">世界上只有一种真正的英雄主义，就是认清了生活的真相后还依然热爱它</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">18</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/leihaogit" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="level-start"><span class="level-item">数据库</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">数据结构与算法</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9D%82%E8%B0%88/"><span class="level-start"><span class="level-item">杂谈</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">编程开发</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-10T00:00:00.000Z">2023-06-10</time></p><p class="title"><a href="/2023/06/10/%E6%9D%82%E8%B0%88_02_%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Vercel%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2/">如何使用Vercel部署自己的Hexo博客</a></p><p class="categories"><a href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-08T00:00:00.000Z">2023-06-08</time></p><p class="title"><a href="/2023/06/08/%E6%9D%82%E8%B0%88_01_%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99/">搭建一个属于自己的ChatGPT镜像网站</a></p><p class="categories"><a href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-13T00:00:00.000Z">2023-05-13</time></p><p class="title"><a href="/2023/05/13/%E5%AE%89%E5%8D%93_04_Navigation%E7%BB%84%E4%BB%B6/">Navigation组件</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/">编程开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-12T00:00:00.000Z">2023-05-12</time></p><p class="title"><a href="/2023/05/12/%E5%AE%89%E5%8D%93_03_%E5%88%9D%E8%AF%86Jetpack/">初识Jetpack</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/">编程开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-10T00:00:00.000Z">2023-05-10</time></p><p class="title"><a href="/2023/05/10/%E5%9B%9E%E6%BA%AF_01_%E7%BB%84%E5%90%88/">组合</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ChatGPT/"><span class="tag">ChatGPT</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Jetpack/"><span class="tag">Jetpack</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kotlin/"><span class="tag">Kotlin</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQLite/"><span class="tag">SQLite</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"><span class="tag">函数式编程</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"><span class="tag">并发编程</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="tag">数据结构与算法</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%93%BE%E8%A1%A8/"><span class="tag">链表</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"><span class="tag">面向对象编程</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Hao&#039;s Blog</a><p class="is-size-7"><span>&copy; 2023 冲锋皓</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

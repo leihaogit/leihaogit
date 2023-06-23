@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>爬楼梯 - Hao&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hao&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hao&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="动态规划入门 - 爬楼梯"><meta property="og:type" content="blog"><meta property="og:title" content="爬楼梯"><meta property="og:url" content="https://leihao168.top/2023/04/01/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_01_%E7%88%AC%E6%A5%BC%E6%A2%AF/"><meta property="og:site_name" content="Hao&#039;s Blog"><meta property="og:description" content="动态规划入门 - 爬楼梯"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img2.baidu.com/it/u=3882051330,1442332888&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=700&amp;h=467"><meta property="article:published_time" content="2023-04-01T00:00:00.000Z"><meta property="article:modified_time" content="2023-06-23T10:21:41.135Z"><meta property="article:author" content="冲锋皓"><meta property="article:tag" content="Java"><meta property="article:tag" content="数据结构与算法"><meta property="article:tag" content="动态规划"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://img2.baidu.com/it/u=3882051330,1442332888&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=700&amp;h=467"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://leihao168.top/2023/04/01/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_01_%E7%88%AC%E6%A5%BC%E6%A2%AF/"},"headline":"爬楼梯","image":[],"datePublished":"2023-04-01T00:00:00.000Z","dateModified":"2023-06-23T10:21:41.135Z","author":{"@type":"Person","name":"冲锋皓"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":{"text":"Hao's Blog"}}},"description":"动态规划入门 - 爬楼梯"}</script><link rel="canonical" href="https://leihao168.top/2023/04/01/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_01_%E7%88%AC%E6%A5%BC%E6%A2%AF/"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Hao&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://img2.baidu.com/it/u=3882051330,1442332888&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=700&amp;h=467" alt="爬楼梯"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-01T00:00:00.000Z" title="4/1/2023, 8:00:00 AM">2023-04-01</time>发表</span><span class="level-item"><time dateTime="2023-06-23T10:21:41.135Z" title="6/23/2023, 6:21:41 PM">2023-06-23</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></span><span class="level-item">15 分钟读完 (大约2267个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">爬楼梯</h1><div class="content"><blockquote>
+<p>动态规划算法是一种优化问题的高效解决方法，它利用已知子问题的最优解来解决大问题。在计算机科学、数学和经济学等领域广泛应用。<br>爬楼梯（Climbing Stairs）是一个经典的动态规划算法问题，假设你正在爬楼梯，每次只能爬1个或2个台阶，问你爬到第n个台阶有几种不同的方法。这个问题的关键是如何运用动态规划算法，将问题分解为最优子结构，并从每个子问题中获得最优解，进而获得原问题的最优解。<br>本文将详细介绍爬楼梯问题的解决方法，包括如何运用动态规划算法，将问题转化为相对简单的子问题，并给出Java代码实现。通过分析爬楼梯问题，读者将深入了解动态规划算法的思想和应用，从而提高编程技能。</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="一、定义和举例"><a href="#一、定义和举例" class="headerlink" title="一、定义和举例"></a>一、定义和举例</h1><h2 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h2><img src="https://images.xiaozhuanlan.com/photo/2019/e4b2c5af9ad4ff9455c0d071b6020817.png">
+
+<ul>
+<li><p>什么是动态规划？百度是这么说的：动态规划（Dynamic<br>Programming，DP）是运筹学的一个分支，是求解决策过程最优化的过程。20世纪50年代初，美国数学家贝尔曼（R.Bellman）等人在研究多阶段决策过程的优化问题时，提出了著名的最优化原理，从而创立了动态规划。动态规划的应用极其广泛，包括工程技术、经济、工业生产、军事以及自动化控制等领域，并在背包问题、生产经营问题、资金管理问题、资源分配问题、最短路径问题和复杂系统可靠性问题等中取得了显著的效果。</p>
+</li>
+<li><p>很好，说了等于没说。当然了，这只是最粗略的概括，再深入探究的话，涉及到的内容我也搞不清楚（读大学时有修过运筹学这门学科，但是忘得差不多了）。<br>这里不深入讨论数学方面的知识，那么动态规划到底是什么意思呢？通俗一点的说：</p>
+<p><font color="FF0000">动态规划就是从下往上(从前向后)阶梯型求解数值。</font></p>
+</li>
+</ul>
+<p>还是不明白？</p>
+<img src="https://i.postimg.cc/jdT4bQXb/image.gif">
+
+<h2 id="1-2-举个栗子"><a href="#1-2-举个栗子" class="headerlink" title="1.2 举个栗子"></a>1.2 举个栗子</h2><p><strong>爬楼梯</strong></p>
+<p>大家都有过爬楼梯的经历，你是会一次上一个台阶还是一次上两个台阶呢？或者挑战一下自己，跨三阶甚至四阶？<br>现在我们来分析一下这个场景，并加一点限制：</p>
+<ul>
+<li>张三现在来爬楼梯了，他腿比较短，一次只能上一个或者两个台阶，不过还好，他要上的楼梯只有三阶，那他会有几种走法？<br>聪明的你看都看出来了，这还不简单？</li>
+</ul>
+<ol>
+<li>走一阶 -&gt; 走一阶 -&gt; 走一阶</li>
+<li>走一阶 -&gt; 走两阶</li>
+<li>走两阶 -&gt; 走一阶<br/></li>
+</ol>
+<p>OK！爬上去了，这种楼层很低的情况确实很简单。那换种情况，很不幸，张三今天要去爬峨眉山，峨眉山从五显岗到金顶大概有22000多层阶梯，你还能看出来张三共有多少种走法吗？当然不行。<br>那我们先从简单的开始，张三假如再往上多爬一层，爬到第四层阶梯有几种爬法？这时候心算能力差一点的同学可能需要用小本本来计算一下所有情况了，我们列举一下：</p>
+<ol>
+<li>走一阶 -&gt; 走一阶 -&gt; 走一阶 -&gt; 走一阶</li>
+<li>走一阶 -&gt; 走两阶 -&gt; 走一阶</li>
+<li>走一阶 -&gt; 走一阶 -&gt; 走两阶</li>
+<li>走两阶 -&gt; 走一阶 -&gt; 走一阶</li>
+<li>走两阶 -&gt; 走两阶<img src="https://i.postimg.cc/y8fMkkgd/palouti.gif"></li>
+</ol>
+<p>好！停，可以预见的是，阶数如果再加大，枚举将变得不现实，数量太多不仅容易重复记录还容易漏数。所以我们现在只能换个思路。<br>以下就是动态规划的核心思想了：</p>
+<pre><code>张三如果要走到四层，他必须干什么？没错，他必须先走到第三层或者先到第二层。
+</code></pre>
+<p>欸！对哎，可是那又怎么样呢？那可太重要了！<br>我们可以得出一个<strong>很重要的结论</strong>：</p>
+<ul>
+<li>张三走到第四层的所有方法是走到第三层的所有方法加上走到第二层的所有方法。<br>再扩展一下</li>
+<li>张三走到第三层的所有方法是走到第二层的所有方法加上走到第一层的所有方法。</li>
+<li>… 第五层 … 是 … 第四层 … 加上 … 第三层 …。</li>
+<li>… 第n层 … 是 … 第n-1层 … 加上 … 第n-2层 …。</li>
+</ul>
+<p>发现规律了吗？没错，一句话<strong>总结</strong>就是：</p>
+<pre><code>张三后续做的决策都会受到前面所做决策的影响！
+</code></pre>
+<h2 id="1-3-小结一下"><a href="#1-3-小结一下" class="headerlink" title="1.3 小结一下"></a>1.3 小结一下</h2><p>可能有过算法基础的同学觉得这个上面的分析好像有点似曾相识啊，有点像那个什么斐波那契数列，还有点像递归思想。<br>这里就不讨论递归是什么了，但是需要知道，递归不等于动态规划，他们的思想刚好相反，前面说过，动态规划是从下往上(从前向后)阶梯型求解数值。而递归是从上往下(从后向前)阶梯型求解数值。<br>更通俗一点的说：</p>
+<ul>
+<li><p>递归是先解决大问题，再解决小问题</p>
+</li>
+<li><p>动态规划是先解决小问题，再解决大问题</p>
+<img src="https://img2.baidu.com/it/u=3252135844,3963149308&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=248"></li>
+<li><p>下面是递归和动态规划的代码示例，有兴趣的同学可以琢磨一下</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//递归</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Ra</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>);   <span class="comment">// 从最大的数字开始考虑</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态规划</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dp</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">dp</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">100</span>];<span class="comment">// 动态数组的含义：里面放着从 1-n 每一个数字的阶乘</span></span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (</span><br><span class="line">                <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">                i &lt;= n; i++) <span class="comment">// 从最小的数字开始考虑，将所有的结果放在数组中</span></span><br><span class="line">        &#123;</span><br><span class="line">            dp[i] = i * dp[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、解决问题"><a href="#二、解决问题" class="headerlink" title="二、解决问题"></a>二、解决问题</h1><h2 id="2-1-定义数组元素含义"><a href="#2-1-定义数组元素含义" class="headerlink" title="2.1 定义数组元素含义"></a>2.1 定义数组元素含义</h2><ul>
+<li><p>首先我们重新梳理一下问题：<br><strong>假设张三正在爬楼梯，需要 n 阶才能到达楼顶。<br>每次可以爬 1 或 2 个台阶。他会有多少种不同的方法可以爬到楼顶呢？</strong></p>
+</li>
+<li><p>有了明确的问题，再加上前面的分析之后，我们进行第一步：定义数组元素含义。<br>我们先来定义一个数组dp[n]，他代表爬到第n阶楼梯所用的方法数，也就是我们要求的结果。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">/*  省略  */</span></span><br><span class="line">    <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];<span class="comment">//dp[n]即为我们想要的结果</span></span><br><span class="line">    <span class="comment">/*  省略  */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-找出数组元素之间的关系式（状态转移方程）"><a href="#2-2-找出数组元素之间的关系式（状态转移方程）" class="headerlink" title="2.2 找出数组元素之间的关系式（状态转移方程）"></a>2.2 找出数组元素之间的关系式（状态转移方程）</h2><ul>
+<li><p>这是最难的一步，好在前面我们已经分析出来了，还记得吗？</p>
+</li>
+<li><p>… 第n层 … 是 … 第n-1层 … 加上 … 第n-2层 …。<br>所以我们得出了状态转移方程：</p>
+</li>
+<li><p><strong>dp[n] = dp[n - 1] + dp[n - 2];</strong></p>
+</li>
+</ul>
+<h2 id="2-3-找出初始值"><a href="#2-3-找出初始值" class="headerlink" title="2.3 找出初始值"></a>2.3 找出初始值</h2><ul>
+<li>有的同学已经发现，上面的方程可能出现数组越界的问题。<br>没错，动态规划都会存在初始值，不需要或者不能用状态转移方程得出；<br>因此，我们第三步要做的就是找出这些初始值。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">/*  省略  */</span></span><br><span class="line">        <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];<span class="comment">//dp[n]即为我们想要的结果</span></span><br><span class="line">        <span class="comment">/*  省略  */</span></span><br><span class="line">        <span class="comment">//找出初始值</span></span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">        <span class="comment">/*  省略  */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>好！准备工作已经完成，我们现在可以写出最后的算法了，相关的注释我会写在代码中：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">//分析</span></span><br><span class="line">        <span class="comment">//爬到n层可以爬到第n-1层再爬一步到n，或者爬到n-2再一次爬两步到n</span></span><br><span class="line">        <span class="comment">//假设dp[n]代表爬到第n层可以用的方法数，那么dp[n]=dp[n-1]+dp[n-2];</span></span><br><span class="line">        <span class="comment">//dp[3]=dp[1]+dp[2];</span></span><br><span class="line">        <span class="comment">//dp[1]和dp[2]是初始值，无法通过公式计算</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建一个数组来保存历史数据</span></span><br><span class="line">        <span class="type">int</span>[] dp = <span class="keyword">new</span> <span class="title class_">int</span>[n + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">//排除两种初始情况</span></span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">3</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h1><ul>
+<li>以上就是最经典的动态规划入门题目：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/climbing-stairs/">《爬楼梯》</a>的一个简单分析和对应的解法。<br>当然了，解法不止这一种，就动态规划入门而言，我觉得这种解法相对容易理解一些。</li>
+</ul>
+<p><font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font><br><img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif"></p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Java/">Java</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/04/03/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_02_%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">不同路径</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/03/31/%E5%AE%89%E5%8D%93_01_%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/"><span class="level-item">安卓线程间通信的两种方式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.jpeg" alt="冲锋皓"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">冲锋皓</p><p class="is-size-6 is-block">世界上只有一种真正的英雄主义，就是认清了生活的真相后还依然热爱它</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">18</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/leihaogit" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="level-start"><span class="level-item">数据库</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">数据结构与算法</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%9D%82%E8%B0%88/"><span class="level-start"><span class="level-item">杂谈</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"><span class="level-start"><span class="level-item">编程开发</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-10T00:00:00.000Z">2023-06-10</time></p><p class="title"><a href="/2023/06/10/%E6%9D%82%E8%B0%88_02_%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Vercel%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2/">如何使用Vercel部署自己的Hexo博客</a></p><p class="categories"><a href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-08T00:00:00.000Z">2023-06-08</time></p><p class="title"><a href="/2023/06/08/%E6%9D%82%E8%B0%88_01_%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84ChatGPT%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99/">搭建一个属于自己的ChatGPT镜像网站</a></p><p class="categories"><a href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-13T00:00:00.000Z">2023-05-13</time></p><p class="title"><a href="/2023/05/13/%E5%AE%89%E5%8D%93_04_Navigation%E7%BB%84%E4%BB%B6/">Navigation组件</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/">编程开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-12T00:00:00.000Z">2023-05-12</time></p><p class="title"><a href="/2023/05/12/%E5%AE%89%E5%8D%93_03_%E5%88%9D%E8%AF%86Jetpack/">初识Jetpack</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/">编程开发</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-10T00:00:00.000Z">2023-05-10</time></p><p class="title"><a href="/2023/05/10/%E5%9B%9E%E6%BA%AF_01_%E7%BB%84%E5%90%88/">组合</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ChatGPT/"><span class="tag">ChatGPT</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Jetpack/"><span class="tag">Jetpack</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kotlin/"><span class="tag">Kotlin</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQLite/"><span class="tag">SQLite</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"><span class="tag">函数式编程</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"><span class="tag">并发编程</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="tag">数据结构与算法</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%93%BE%E8%A1%A8/"><span class="tag">链表</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"><span class="tag">面向对象编程</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Hao&#039;s Blog</a><p class="is-size-7"><span>&copy; 2023 冲锋皓</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

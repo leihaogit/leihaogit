@@ -41,7 +41,7 @@ ChatGPT-Next-Web：
 
 - ChatGPT-Next-Web 流程相对复杂一丢丢，但相对更"实惠"一些，我们项目部署交给免费的 Vercel ，域名解析交给免费的 CloudFlare，这样一套乞丐级流程下来，全程只需要花一个买域名的钱，总花费7快多一点。
 
-<img src="https://www.helloimg.com/images/2023/06/08/oslmMu.jpg" width="33%">
+<img src="https://www.helloimg.com/images/2023/06/08/oslmMu.jpg">
 
 ## 2.2 Fork 项目
 
@@ -57,7 +57,7 @@ ChatGPT-Next-Web：
 
 - 选择刚刚 Fork 的项目进行导入。
 
-<img src="https://www.helloimg.com/images/2023/06/09/osT0vX.jpg" width="50%" style="border: 0.1px solid #00BFFF; border-radius: 5px;">
+<img src="https://www.helloimg.com/images/2023/06/09/osT0vX.jpg" style="border: 0.1px solid #00BFFF; border-radius: 5px;">
 
 - 配置参数，选择 Environment Variables 并添加两个环境变量参数：
   1. `CODE` 代表网站的访问控制密码，密码不要忘了。

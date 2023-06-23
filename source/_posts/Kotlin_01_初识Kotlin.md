@@ -197,7 +197,6 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
 
 - Kotlin 在 Android 开发中的应用，其最大的优势在于提高开发效率和项目质量。相较于 Java 语言，Kotlin 的语法更加简洁，支持各种现代化的语言特性，如空安全、扩展函数、内联函数以及 lambda
   表达式等，可以减少代码量并提供更加简洁的 API 调用方式。此外，Kotlin 还提供了一些有用的库，如 Anko 和 KTX，使得 Android 开发工作更加便捷和快速。
-  <img src="">
 
 ## 2.2 Web 开发
 
@@ -225,5 +224,6 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
   来了解并掌握这个新语言的特点和优势，开始使用 Kotlin 进行程序开发。
 
 <font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
+
 <img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">
       

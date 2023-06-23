@@ -36,6 +36,7 @@ tags:
 
 - Jetpack，本身这个单词的含义是喷气背包、喷气发动机组件。在2018年的Google I/O大会上，谷歌将其最新推出的开发工具包命名为Jetpack，也许是为了强调其在应用程序开发中的"引擎"或"助推器"的作用，同时也传递了一个信息：Jetpack可以帮助开发者更快地构建高质量的Android应用程序。Jetpack应该被视为一种可靠的、可扩展的、高效的开发工具，可以帮助开发者实现目标并推动应用程序向前发展。
 - 最初的 Jetpack 图标是一个背着喷气背包的 Android 机器人，可以说是非常形象生动了。
+
 <img src="https://www.helloimg.com/images/2023/05/12/oxIHzc.png"  width="50%">
 
 ## 2.2 发展
@@ -136,6 +137,7 @@ override fun onDestroy() {
 - ViewModel 是 MVVM 架构中的一部分，用于管理应用程序的数据和业务逻辑。它通常与 LiveData 一起使用，可以将业务逻辑和 UI 组件进行解耦，使得数据持久性和业务逻辑不受 UI 生命周期的影响。
 - 在 Android 中，每个 Activity 或 Fragment 都有其自己的生命周期，当这些 UI 组件因为`旋转手机、配置更改（如切换语言）、资源内存不足`等原因被销毁并重新创建时，会导致其中包含的数据丢失，从而影响用户体验。而 ViewModel 的引入，则可以帮助我们在这些 UI 组件被销毁重建时，保持其中的数据状态不变。
 下面演示一下横屏导致数据丢失的情况：
+
 <img src="https://www.helloimg.com/images/2023/05/12/oxIfwn.gif" width="30%">
 
 - 下面展示如何使用 ViewModel 和 LiveData 技术来实现数据的绑定和更新。
@@ -184,6 +186,7 @@ class ViewModelActivity : AppCompatActivity() {
 }
 ```
 3. 实现效果
+
 <img src="https://www.helloimg.com/images/2023/05/12/ox6Pwr.gif" width="30%">
 
 - 上述示例中，我们使用了 LiveData 和 ViewModel 这两个组件来实现 Activity 销毁并重建时数据不会丢失的功能。
@@ -195,4 +198,5 @@ class ViewModelActivity : AppCompatActivity() {
 - 这两天使用 kotlin 进行编码，也让我对 Kotlin 语法'太甜了'的感觉有所改善，确实在某些时候能感觉到这门语言的便利之处，希望在后续学习中能见识到这门语言更强大的地方。
 
 <font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
+
 <img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

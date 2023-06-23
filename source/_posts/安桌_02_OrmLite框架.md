@@ -224,6 +224,7 @@ public class OrmLiteUtils {
 好了，准备工作已经全部完成，接下来就会拥有非常愉快的数据库操作体验了！
 接下来我们创建一个非常简单的应用，测试我们的上面的配置能否正常工作。具体的安卓代码就省略了，它不是今天的重点。
 应用很简单，提供几个按钮，可以操作 user 表即可。
+
 <img src="https://i.postimg.cc/gcQL67M4/demo-pic.jpg">
 
 ### 2.4.1 获取数据库访问对象
@@ -292,4 +293,5 @@ public class SQLiteActivity extends AppCompatActivity {
 - 总之，OrmLite 简单易用、灵活可扩展、性能优良，是 Android 数据库操作中非常值得探究的一种工具。
 
 <font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
+
 <img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

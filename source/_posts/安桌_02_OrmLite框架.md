@@ -291,7 +291,3 @@ public class SQLiteActivity extends AppCompatActivity {
 - 在使用 OrmLite 时，需要先定义数据表对应的实体类，然后通过 Annotation 来配置表名、字段名、主键等信息。OrmLite 还可以帮助程序员自动生成表结构，同时支持手动管理版本升级。
 - 除此之外，OrmLite 还提供了一些高级功能，例如事务处理、外键约束、查询器（QueryBuilder）等。查询器是 OrmLite 中用于查询数据的 API，支持链式调用、多条件查询等功能，可以帮助程序员快速提取所需数据。
 - 总之，OrmLite 简单易用、灵活可扩展、性能优良，是 Android 数据库操作中非常值得探究的一种工具。
-
-<font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
-
-<img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

@@ -89,7 +89,3 @@ deploy:
 
 - 总的来说，部署是很简单的，告别了之前卡顿的GitHub Pages，体验也会好上不少！
 - 除了访问更流畅，现在我们每次写完博客，也不需要再执行`Hexo deploy`了，只要我们将代码上传至仓库，Vercel 就会自动帮我们完成更新部署工作。
-
-<font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
-
-<img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

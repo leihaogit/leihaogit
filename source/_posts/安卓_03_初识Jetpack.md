@@ -196,7 +196,3 @@ class ViewModelActivity : AppCompatActivity() {
 
 - 由于目前只接触到这几个组件，先分享到这里，体验下来的感觉可以说非常奇妙。原来数据还能这样更新，原来视图还能这样绑定...或许接触新知识的最大的乐趣就在于此吧。
 - 这两天使用 kotlin 进行编码，也让我对 Kotlin 语法'太甜了'的感觉有所改善，确实在某些时候能感觉到这门语言的便利之处，希望在后续学习中能见识到这门语言更强大的地方。
-
-<font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
-
-<img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

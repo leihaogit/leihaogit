@@ -130,7 +130,3 @@ ChatGPT-Next-Web：
 - 在部署好的网站的设置里面，有一个访问密码和API Key，访问密码即之前`2.3 Vercel 部署`中`CODE`的值，如果访问密码验证成功，就会消耗你配置的那个API Key，否则会优先使用下方配置的API Key。
 
 <img src="https://www.helloimg.com/images/2023/06/09/osvHvE.png" style="border: 0.1px solid #00BFFF; border-radius: 5px;">
-
-<font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
-
-<img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

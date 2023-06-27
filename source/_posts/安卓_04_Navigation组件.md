@@ -173,7 +173,3 @@ class NavigationActivity : AppCompatActivity() {
 - 在大型项目中，如果没有一个良好的导航体系，那么我们很容易陷入混乱，无法有效地管理 Fragment。而使用 Navigation 组件，我们可以轻松实现 Fragment 的模块化和复用，减少重复代码的编写，提高代码的可维护性和扩展性。
 - 可能只有两个 Fragment 还体现不出 Navigation 强大之处，但是能想象得出，在 Fragment 增多时，这种可视化的操作会使代码更加简洁易懂，让我们的逻辑也更为清晰。
 - 当然，本文只是简单介绍了 Navigation 的使用，Navigation 还有更多的功能等待我们进一步的探索！
-
-<font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
-
-<img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">

@@ -222,8 +222,4 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
 - 总之，Kotlin 是一个非常有用的编程语言，它具有很强的兼容性、可扩展性和易读易写性，可以在各种应用场景下发挥作用。
 - 即使是初学者，也可以通过阅读 [Kotlin 的官方文档和教程](https://www.kotlincn.net/docs/reference/)
   来了解并掌握这个新语言的特点和优势，开始使用 Kotlin 进行程序开发。
-
-<font color="87CEEB"><br>有任何问题都可以通过导航栏的联系方式联系我！谢谢❤️！</font>
-
-<img src="https://i.postimg.cc/0j3J4Hg1/bixin.gif">
       

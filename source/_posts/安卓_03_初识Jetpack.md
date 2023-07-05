@@ -1,5 +1,5 @@
 ---
-title: '初识Jetpack'
+title: '初识 Jetpack'
 date: '2023-05-12'
 description: '初步了解Jetpack的概念和目标，并介绍LiveCycle、LiveData和ViewModel组件。'
 cover: 'https://www.helloimg.com/images/2023/05/12/oxIXog.jpg'

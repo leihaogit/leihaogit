@@ -1,5 +1,5 @@
 ---
-title: '搭建一个属于自己的ChatGPT镜像网站'
+title: '搭建一个属于自己的 ChatGPT 镜像网站'
 date: '2023-06-08'
 description: '教程 - 如何部署自己的私人 ChatGPT 网站'
 cover: 'https://www.helloimg.com/images/2023/06/09/osdDQu.webp'

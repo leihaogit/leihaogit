@@ -1,5 +1,5 @@
 ---
-title: '初识Kotlin'
+title: '初识 Kotlin'
 date: '2023-04-08'
 description: 'Kotlin的学习记录'
 cover: 'https://www.helloimg.com/images/2023/05/02/oqTWxn.jpg'

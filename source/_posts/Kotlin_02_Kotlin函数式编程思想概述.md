@@ -1,5 +1,5 @@
 ---
-title: 'Kotlin函数式编程思想概述'
+title: 'Kotlin 函数式编程思想概述'
 date: '2023-04-10'
 description: 'Kotlin的学习记录'
 cover: 'https://www.helloimg.com/images/2023/05/13/oxuwrS.webp'

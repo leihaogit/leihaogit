@@ -1,5 +1,5 @@
 ---
-title: 'OrmLite框架的简单使用'
+title: 'OrmLite 框架的简单使用'
 date: '2023-04-19'
 description: '介绍如何使用OrmLite框架对SQLite数据库进行管理'
 cover: 'https://img2.baidu.com/it/u=3744464585,914311706&fm=253&fmt=auto&app=138&f=JPEG?w=660&h=417'

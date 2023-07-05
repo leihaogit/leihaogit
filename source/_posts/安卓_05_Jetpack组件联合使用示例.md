@@ -1,5 +1,5 @@
 ---
-title: 'Jetpack组件联合使用示例'
+title: 'Jetpack 组件联合使用示例'
 date: '2023-06-27'
 description: '总结目前学过的 Jetpack 组件，并使用他们写一个口算练习App'
 cover: 'https://www.helloimg.com/images/2023/05/12/oxIXog.jpg'

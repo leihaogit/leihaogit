@@ -1,7 +1,7 @@
 ---
-title: '如何使用Vercel部署自己的Hexo博客'
+title: '如何使用 Vercel 部署自己的 Hexo 博客'
 date: '2023-06-10'
-description: '教程 - 将自己的Blog使用Velcel进行部署，告别Github Pages的卡顿'
+description: '教程 - 将自己的 Blog 使用Velcel进行部署，告别 Github Pages 的卡顿'
 cover: 'https://www.helloimg.com/images/2023/06/10/osNX56.png'
 categories:
 

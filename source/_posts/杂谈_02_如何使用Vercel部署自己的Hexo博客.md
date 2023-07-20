@@ -28,7 +28,7 @@ deploy:
 - 分支名字其实无所谓，但是为了统一规范一般都叫这个名字。
 - `说明`：博客实体就是 hexo generate 生成的内容，长这样：
 
-<img src="https://www.helloimg.com/images/2023/06/10/osNAih.jpg" style="border: 0.1px solid #00BFFF; border-radius: 5px;">
+<img src="https://www.helloimg.com/images/2023/06/10/osNAih.jpg"  width="50%" style="border: 0.1px solid #00BFFF; border-radius: 5px;">
 
 - 其实就是博客项目生成的`public`文件夹，里面包括了我们这个静态网站的所有内容。
 - 我们在执行`hexo generate`时，会生成当前项目对应的 public 文件夹，然后执行`hexo deploy`时，会将生成的 public 文件夹推送至你配置文件配置的那个仓库的指定分支。

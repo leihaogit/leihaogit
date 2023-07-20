@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo:
+  logo: https://www.helloimg.com/images/2023/07/20/oA9Cz6.gif
   display_title: true
   fixed: false # fixed navigation bar
 
@@ -243,7 +243,7 @@ aside:
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     orderby: random # Order of tags, random/name/length
     order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
     sort_order: # Don't modify the setting unless you know how it works
@@ -356,7 +356,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # Preload the search data when the page loads.
   preload: false
   # Show top n results per article, show all results by setting to -1
@@ -635,10 +635,10 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: '#F0F8FF'
 
 # Footer Background
-footer_bg: false
+footer_bg: true
 
 # Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)
 mask:
@@ -695,8 +695,8 @@ fireworks:
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
 click_heart:
-  enable: false
-  mobile: false
+  enable: true
+  mobile: true
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
 ClickShowText:

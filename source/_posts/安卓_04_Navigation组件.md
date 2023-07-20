@@ -162,7 +162,7 @@ class NavigationActivity : AppCompatActivity() {
 ```
 - 实现的效果：
 
-<img src="https://www.helloimg.com/images/2023/05/13/oxyDKc.gif">
+<img src="https://www.helloimg.com/images/2023/05/13/oxyDKc.gif"  width="30%">
 
 - 目前为止，就实现了两个 Fragment 之间的随意切换，再也不用频繁的进行 Fragment 事务的处理了！
 - 使用 Navigation 这种方式，使得添加 Fragment 非常简单，还可以自由的传递数据、设置跳转动画效果等等。

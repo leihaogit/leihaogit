@@ -36,7 +36,7 @@ tags:
 - Jetpack，本身这个单词的含义是喷气背包、喷气发动机组件。在2018年的Google I/O大会上，谷歌将其最新推出的开发工具包命名为Jetpack，也许是为了强调其在应用程序开发中的"引擎"或"助推器"的作用，同时也传递了一个信息：Jetpack可以帮助开发者更快地构建高质量的Android应用程序。Jetpack应该被视为一种可靠的、可扩展的、高效的开发工具，可以帮助开发者实现目标并推动应用程序向前发展。
 - 最初的 Jetpack 图标是一个背着喷气背包的 Android 机器人，可以说是非常形象生动了。
 
-<img src="https://www.helloimg.com/images/2023/05/12/oxIHzc.png">
+<img src="https://www.helloimg.com/images/2023/05/12/oxIHzc.png" width="30%">
 
 ## 2.2 发展
 

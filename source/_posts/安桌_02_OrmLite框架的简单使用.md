@@ -35,7 +35,7 @@ tags:
     - 使用 ORM 后，我们只需要定义一个 User 类，通过一些注解或者配置文件告诉 ORM 框架 User 类与数据库中的哪个表相对应，以及每个属性对应表中的哪个字段，ORM 框架就可以自动的将 User 对象和数据库中的
       User 表进行映射。这样我们就可以像操作普通的 Java 对象一样去操作数据库了，不需要写复杂的 SQL 语句，也不需要手动进行数据转换。
 
-<img src="https://i.postimg.cc/tg7QfCb3/niu.gif">
+<img src="https://www.helloimg.com/images/2023/07/20/oAWVvE.gif" width="30%">
 
 ## 1.2 OrmLite
 
@@ -59,8 +59,6 @@ Lite 我们都知道，是精简、轻量的意思，像手机或者软件就会
 # 二、OrmLite的使用
 
 概念说多了没有太大意义，我们直接进行实操，才能深入体会 ORM 这种思想和 OrmLite 在操作数据库方面带来的便利。
-
-<img src="https://i.postimg.cc/HnFTCdFN/zhuangbi.jpg">
 
 ## 2.1 引入依赖
 
@@ -225,7 +223,7 @@ public class OrmLiteUtils {
 接下来我们创建一个非常简单的应用，测试我们的上面的配置能否正常工作。具体的安卓代码就省略了，它不是今天的重点。
 应用很简单，提供几个按钮，可以操作 user 表即可。
 
-<img src="https://i.postimg.cc/gcQL67M4/demo-pic.jpg">
+<img src="https://www.helloimg.com/images/2023/07/20/oAWhe9.jpg" width="50%">
 
 ### 2.4.1 获取数据库访问对象
 
@@ -282,7 +280,7 @@ public class SQLiteActivity extends AppCompatActivity {
 这里就演示这两个吧，因为其他操作也非常简单，几行代码就可以搞定，感兴趣的同学可以去探索一下。
 接下来我们看看他给我们存到数据库里面的内容：
 
-<img src="https://i.postimg.cc/d3Y9bMn9/db-demo.png">
+<img src="https://www.helloimg.com/images/2023/07/20/oAWjTX.png"  width="50%">
 
 没有任何问题！
 

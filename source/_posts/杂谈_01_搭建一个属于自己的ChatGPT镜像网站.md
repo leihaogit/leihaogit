@@ -40,7 +40,7 @@ ChatGPT-Next-Web：
 
 - ChatGPT-Next-Web 流程相对复杂一丢丢，但相对更"实惠"一些，我们项目部署交给免费的 Vercel ，域名解析交给免费的 CloudFlare，这样一套乞丐级流程下来，全程只需要花一个买域名的钱，总花费7快多一点。
 
-<img src="https://www.helloimg.com/images/2023/06/08/oslmMu.jpg">
+<img src="https://www.helloimg.com/images/2023/06/08/oslmMu.jpg"  width="30%">
 
 ## 2.2 Fork 项目
 

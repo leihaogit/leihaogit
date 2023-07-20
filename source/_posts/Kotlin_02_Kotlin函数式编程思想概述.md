@@ -81,7 +81,7 @@ tags:
 5. 代码风格不同
    面向对象编程中，常常会使用类、对象、继承等关键字和概念，代码的风格比较严谨、精确。而函数式编程则注重表达式的简洁和流畅，代码的风格比较自然和直观。
 
-<img src="https://www.helloimg.com/images/2023/07/19/oA2tf9.jpg">
+<img src="https://www.helloimg.com/images/2023/07/19/oA2tf9.jpg"  width="30%">
 
 ### 1.3.4 两种编程范式的运用
 

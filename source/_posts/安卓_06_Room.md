@@ -267,7 +267,7 @@ class WordViewModel(application: Application) : AndroidViewModel(application) {
 # 三、版本迁移
 
 - 由于数据库的结构变化，导致需要进行数据库版本升级和数据迁移，而这两件事一直以来都是比较麻烦的。这里我们演示一下在 Room 如何进行一个简单的数据库升级操作。
-- 假如我们的数据库 word 表需要新增一个字段`bar_data`，我们首先需要做的是在 Word 实体类中增加一个属性
+- 假如我们的数据库 word 表需要新增一个字段`bar_data`（删除字段所做的操作会复杂一些，代码中也有示例），我们首先需要做的是在 Word 实体类中增加一个属性：
 
 ```kotlin
     @ColumnInfo(name = "bar_data")
@@ -299,12 +299,24 @@ abstract class WordDatabase : RoomDatabase() {
             }
         }
 
-        //自定义迁移逻辑
-        private val Migration_1_2 = object : Migration(1, 2) {
-            override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("Alter table word ADD COLUMN bar_data INTEGER NOT null Default 0")
-            }
+      //自定义迁移逻辑（新增bar_data字段）
+      private val Migration_1_2 = object : Migration(1, 2) {
+        override fun migrate(database: SupportSQLiteDatabase) {
+          database.execSQL("Alter table word ADD COLUMN bar_data INTEGER NOT null Default 0")
         }
+      }
+
+      //自定义迁移逻辑（删除bar_data字段）
+      private val Migration_2_3 = object : Migration(2, 3) {
+        override fun migrate(database: SupportSQLiteDatabase) {
+          database.execSQL("create table word_tmp (id INTEGER primary key not null,english_word TEXT not null,chinese_meaning TEXT not null)")
+          database.execSQL(
+            "insert into word_tmp (id,english_word,chinese_meaning) select id,english_word,chinese_meaning from word"
+          )
+          database.execSQL("drop table word")
+          database.execSQL("alter table word_tmp rename to word")
+        }
+      }
     }
 
     abstract fun getWordDao(): WordDao

@@ -15,8 +15,6 @@ tags:
 
 ---
 
-> 目前学过的 Jetpack 组件有 ViewModel、Navigation以及DataBinding，今天汇总一下这三个重要的组件，包括概念和实际运用，并使用他们来完成一个简单的口算练习app。
-
 # 一、概念汇总
 
 ## 1.1 ViewModel

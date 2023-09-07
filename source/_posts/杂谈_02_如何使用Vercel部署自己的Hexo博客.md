@@ -13,8 +13,6 @@ tags:
 
 ---
 
-> 这几天摆弄 ChatGPT 的镜像站，时常接触到 Vercel，发现这玩意儿真挺好用，至少访问速度方面来说是绝对优于 Github Pages的，因此，我也打算将 Blog 重新部署一下，换到 Vercel 上。
-
 # 一、GitHub Pages 部署回顾
 
 - 先看一下之前是怎样部署的，首先在 Hexo 的配置文件`_config.yml`中，修改 deploy 项，type 填写 git，repo 即你的博客仓库地址，branch 是你要部署博客的分支

@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: https://raw.githubusercontent.com/leihaogit/image-host/main/bixin.gif
+  logo: https://i.postimg.cc/0j3J4Hg1/bixin.gif
   display_title: true
   fixed: false # fixed navigation bar
 
@@ -35,11 +35,11 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://raw.githubusercontent.com/leihaogit/image-host/main/blogging.png
+favicon: https://i.postimg.cc/pXpPFxtH/blogging.png
 
 # Avatar (頭像)
 avatar:
-  img: https://raw.githubusercontent.com/leihaogit/image-host/main/o4IV9P.jpg
+  img: https://i.postimg.cc/x1vhkFqQ/avatar.jpg
   effect: false
 
 # Disable all banner image

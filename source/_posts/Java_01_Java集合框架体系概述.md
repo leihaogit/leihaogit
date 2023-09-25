@@ -2,7 +2,7 @@
 title: 'Java集合框架体系概述'
 date: '2023-07-03'
 description: '介绍 Java 编程语言中的集合框架，包括列表、集合、队列、映射等。'
-cover: 'https://www.helloimg.com/images/2023/07/03/o42YST.webp'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/o42YST.webp'
 categories:
 
 - 编程开发
@@ -32,8 +32,6 @@ tags:
 - `List`、`Set`、`Map`、`Queue`四个接口是 Java 集合框架的核心接口，涵盖了最常见的数据结构和操作。
 
 # 二、List 接口
-
-<img src="https://www.helloimg.com/images/2023/07/03/o4WOaM.png">
 
 ## 2.1 总述
 
@@ -141,8 +139,6 @@ tags:
 
 # 三、Set 接口
 
-<img src="https://www.helloimg.com/images/2023/07/03/o4WcbP.png">
-
 ## 3.1 总述
 
 - **概念**：继承自`Collection`接口，用于存储一组唯一的对象，不允许包含重复元素。
@@ -223,8 +219,6 @@ tags:
   8. forEach(Consumer action)：对LinkedHashSet中的每个元素执行指定操作。
 
 # 四、Map 接口
-
-<img src="https://www.helloimg.com/images/2023/07/03/o4WdD6.png">
 
 ## 4.1 总述
 
@@ -358,8 +352,6 @@ tags:
   10. containsValue(Object value)：检查属性列表是否包含指定的值。
 
 # 五、Queue 接口
-
-<img src="https://www.helloimg.com/images/2023/07/03/o4W0AR.png">
 
 ## 5.1 总述
 

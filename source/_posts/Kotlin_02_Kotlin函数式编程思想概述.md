@@ -2,7 +2,7 @@
 title: 'Kotlin 函数式编程思想概述'
 date: '2023-04-10'
 description: '函数式编程是一种以函数为基础、抽象和组合计算单元的编程范式。'
-cover: 'https://www.helloimg.com/images/2023/05/13/oxuwrS.webp'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxuwrS.webp'
 categories:
 
 - 编程开发
@@ -36,15 +36,11 @@ tags:
 在面向对象编程中，方法经常被用来执行某个特定对象的行为，也**经常涉及**到继承、多态等概念。而在函数式编程中，函数更加强调纯函数和不可变数据的使用，**通常不涉及**到类和对象的概念。
 **总的来说，函数和方法都是实现某种特定功能的代码块，但它们的使用方式和概念在不同的编程语言和编程范式中可能存在差异。**
 
-<img src="https://www.helloimg.com/images/2023/07/19/oA2JBv.jpg">
-
 ## 1.3 面向对象编程和函数式编程的区别
 
 **面向对象编程**（Object-Oriented Programming，OOP）和**函数式编程**（Functional Programming，FP）是两种不同的编程范式。
 
 ### 1.3.1 面向对象编程
-
-<img src="https://www.helloimg.com/images/2023/07/19/oA2mtE.webp">
 
 面向对象编程相信有过Java基础的同学肯定不会陌生，面试也会经常出现一个送命题：**请谈谈你对面向对象编程概念的理解。** 那么什么是对象？什么是面向对象编程呢？
 
@@ -54,8 +50,6 @@ tags:
 - 面向对象编程的含义是将程序中的数据和操作封装在一起，形成一个个对象，并通过对象之间的协作和交互来实现程序的功能。面向对象编程强调了程序的模块化和组件化，使得程序更易于理解、修改和维护。
 
 ### 1.3.2 函数式编程
-
-<img src="https://www.helloimg.com/images/2023/07/19/oA2svY.webp">
 
 - 函数式编程（Functional Programming）是一种以函数为核心的编程范式，与传统的命令式编程不同，它强调将计算过程尽量转换为若干个函数之间的组合和运算，而不是通过对程序状态进行赋值和修改来实现。
 - 在函数式编程中，函数被视为一等公民，可以像其他数据类型一样被传递、返回和组合。同时，函数式编程还强调避免副作用，即尽可能地消除函数对外部环境的依赖，使得同样的输入能够得到同样的输出。
@@ -78,8 +72,6 @@ tags:
 
 5. 代码风格不同
    面向对象编程中，常常会使用类、对象、继承等关键字和概念，代码的风格比较严谨、精确。而函数式编程则注重表达式的简洁和流畅，代码的风格比较自然和直观。
-
-<img src="https://www.helloimg.com/images/2023/07/19/oA2tf9.jpg"  width="30%">
 
 ### 1.3.4 两种编程范式的运用
 
@@ -174,8 +166,6 @@ fun processNumbers(numbers: List<Int>, action: Processor) {
 val numbers = listOf(1, 2, 3, 4, 5)
 processNumbers(numbers) { println(it) }
 ```
-
-<img src="https://www.helloimg.com/images/2023/07/19/oA2AqX.gif">
 
 - 没看错吧，这么多？！还真有这么多，而且还不止这么多，如果加上访问修饰符等等的变化，那可真是百花齐放了。
 - Kotlin 中的函数可以具有**默认参数、具名参数调用、扩展函数、局部函数**等特性，这些特性使得 Kotlin 的函数非常灵活和易于使用。

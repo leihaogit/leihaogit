@@ -2,7 +2,7 @@
 title: 'Room 组件使用示例'
 date: '2023-07-22'
 description: 'Room 是 Android 中的一个持久性库，用于简化数据库的访问和管理。'
-cover: 'https://www.helloimg.com/images/2023/07/22/oAQU7o.png'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oAQU7o.png'
 categories:
 
 - 编程开发

@@ -2,7 +2,7 @@
 title: 'Kotlin 中的空安全设计详解'
 date: '2023-07-19'
 description: '之前对 Kotlin 的基本语法、变量声明、空安全设计和兼容性做了笼统的介绍，今天对其中的空安全设计做一个详细的剖析。'
-cover: 'https://www.helloimg.com/images/2023/07/19/oAMLZr.jpg'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oAMLZr.jpg'
 categories:
 
 - 编程开发
@@ -50,8 +50,6 @@ class Sample {
 
 - 虽然看上去只是语法格式有些不同，但如果真这么写，IDE 会报错：`Property must be initialized or be abstract`。什么意思呢，就是说属性需要在声明的同时初始化，除非你把它声明成抽象的。（没错，Kotlin 中属性也可以是抽象的，这点和 Java 也不相同，这里先不理会）
 - 彳亍！那就初始化！欸等等，为什么一定先要初始化啊？Java 里面声明变量的时候都不需要初始化啊，是不是你 Kotlin 故意找茬啊？
-  
-<img src="https://www.helloimg.com/images/2023/07/19/oAMSST.gif">
 
 - 不不不！其实是有原因的，在 Kotlin 中，变量是`没有默认值`的，这点不像 Java，Java 的 field 有默认值（局部变量没有），比如：
 

@@ -2,7 +2,7 @@
 title: '初识 Jetpack'
 date: '2023-05-12'
 description: '初步了解Jetpack的概念和目标，并介绍LiveCycle、LiveData和ViewModel组件。'
-cover: 'https://www.helloimg.com/images/2023/05/12/oxIXog.jpg'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxIXog-1.jpg'
 categories:
 
 - 编程开发
@@ -34,7 +34,7 @@ tags:
 - Jetpack，本身这个单词的含义是喷气背包、喷气发动机组件。在2018年的Google I/O大会上，谷歌将其最新推出的开发工具包命名为Jetpack，也许是为了强调其在应用程序开发中的"引擎"或"助推器"的作用，同时也传递了一个信息：Jetpack可以帮助开发者更快地构建高质量的Android应用程序。Jetpack应该被视为一种可靠的、可扩展的、高效的开发工具，可以帮助开发者实现目标并推动应用程序向前发展。
 - 最初的 Jetpack 图标是一个背着喷气背包的 Android 机器人，可以说是非常形象生动了。
 
-<img src="https://www.helloimg.com/images/2023/05/12/oxIHzc.png" width="30%">
+<img src="https://raw.githubusercontent.com/leihaogit/image-host/main/oxIXog-1.jpg" width="30%">
 
 ## 2.2 发展
 
@@ -133,9 +133,6 @@ override fun onDestroy() {
 - LiveData 的作用主要是将数据从 ViewModel 传递到相应的 View 上，并保证这种数据传递的安全性和正确性。是一种可观察的数据持有类，它可以感知生命周期并在数据变化时通知观察者。
 - ViewModel 是 MVVM 架构中的一部分，用于管理应用程序的数据和业务逻辑。它通常与 LiveData 一起使用，可以将业务逻辑和 UI 组件进行解耦，使得数据持久性和业务逻辑不受 UI 生命周期的影响。
 - 在 Android 中，每个 Activity 或 Fragment 都有其自己的生命周期，当这些 UI 组件因为`旋转手机、配置更改（如切换语言）、资源内存不足`等原因被销毁并重新创建时，会导致其中包含的数据丢失，从而影响用户体验。而 ViewModel 的引入，则可以帮助我们在这些 UI 组件被销毁重建时，保持其中的数据状态不变。
-下面演示一下横屏导致数据丢失的情况：
-
-<img src="https://www.helloimg.com/images/2023/05/12/oxIfwn.gif" width="30%">
 
 - 下面展示如何使用 ViewModel 和 LiveData 技术来实现数据的绑定和更新。
 
@@ -182,9 +179,6 @@ class ViewModelActivity : AppCompatActivity() {
     }
 }
 ```
-3. 实现效果
-
-<img src="https://www.helloimg.com/images/2023/05/12/ox6Pwr.gif" width="30%">
 
 - 上述示例中，我们使用了 LiveData 和 ViewModel 这两个组件来实现 Activity 销毁并重建时数据不会丢失的功能。
 - 总的来说，LiveData 和 ViewModel 是 Android Jetpack 组件库中非常重要的两个组件，它们能够帮助我们实现应用程序中大量的业务逻辑和提高应用程序性能，并且它们的生命周期与其关联的组件相对应，能够更好地处理组件销毁等情况，从而避免数据丢失或内存泄漏等问题。

@@ -2,7 +2,7 @@
 title: 'Jetpack 组件联合使用示例'
 date: '2023-06-27'
 description: '总结目前学过的 Jetpack 组件，并使用他们写一个口算练习App'
-cover: 'https://www.helloimg.com/images/2023/05/12/oxIXog.jpg'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxIXog.jpg'
 categories:
 
 - 编程开发
@@ -63,24 +63,13 @@ dependencies {
 
 - 创建一个 Activity 页面，作为我们的 Fragment 容器。
 - 创建四个 Fragment 页面，分别是 TitleFragment（主界面）、QuestionFragment（答题界面）、WinFragment（胜利界面）、LoseFragment（失败界面）。
-- 创建好之后结构如下：
-
-<img src="https://www.helloimg.com/images/2023/06/27/o41vaQ.png">
 
 ### 2.2.2 布局
 
 - 这里不给出具体的布局文本，因为本身布局很简单，并且这并不是这次的重点，这里只提供一下预览视图，具体布局可以任意变化。
-- 首先是 TitleFragment（主界面），内容很少，如下：
-
-<img src="https://www.helloimg.com/images/2023/06/27/o41wbt.png" width="30%">
-
-- 然后是 QuestionFragment（答题界面），主要用于答题，界面如下：
-
-<img src="https://www.helloimg.com/images/2023/06/27/o410Du.png" width="30%">
-
-- 最后是成功（超过最高分）和失败（未超过最高分）的界面，二者布局几乎一样：
-
-<img src="https://www.helloimg.com/images/2023/06/27/o41QGv.png" width="30%"> <img src="https://www.helloimg.com/images/2023/06/27/o41pAE.png" width="30%">
+- 首先是 TitleFragment（主界面）。
+- 然后是 QuestionFragment（答题界面），主要用于答题。
+- 最后是成功（超过最高分）和失败（未超过最高分）的界面。
 
 ## 2.3 设置导航图(navGraph)
 
@@ -88,21 +77,11 @@ dependencies {
 
 - 点击 res 资源路径，右键 -> new -> Android Resource File -> 类型选择 Navigation(这一步会提示导入依赖，如果失败多试几次)
 
-<img src="https://www.helloimg.com/images/2023/06/27/o417j9.png">
-
 ### 2.3.2 编辑导航图
 
 - 将四个 Fragment 添加进来，并设置 TitleFragment 为`Start Destination`，然后将所有的跳转逻辑`action`添加进来，直接在视图中拉箭头指向就可以了。
 
-<img src="https://www.helloimg.com/images/2023/06/27/o41U1P.png">
-
 - 在 CalculationActivity 的布局文件中添加一个 NavHostFragment 控件，选择我们刚才创建的 nav_calc，将控件命名为fragment（也可以不改，都行）。
-
-<img src="https://www.helloimg.com/images/2023/06/27/o41IEX.png">
-
-- 最后的效果如图：
-
-<img src="https://www.helloimg.com/images/2023/06/27/o4169g.png">
 
 ## 2.4 ViewModel
 
@@ -230,8 +209,6 @@ class MyViewModel(application: Application, savedStateHandle: SavedStateHandle) 
 ## 2.5 DataBinding
 
 - 首先，将四个Fragment的布局界面都转化为 DataBinding 界面，并绑定ViewModel。
-
-<img src="https://www.helloimg.com/images/2023/06/27/o418kM.png">
 
 ```xml
     <data>

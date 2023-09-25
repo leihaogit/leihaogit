@@ -2,7 +2,7 @@
 title: 'ViewPager 与 ViewPager2 的使用示例'
 date: '2023-08-15'
 description: '介绍如何使用 ViewPager + BottomNavigationView 实现底部导航，ViewPager2 + TabLayout 实现顶部导航。'
-cover: 'https://www.helloimg.com/images/2023/08/15/oSFPMc.png'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oSFPMc.png'
 categories:
 
 - 编程开发
@@ -19,9 +19,7 @@ tags:
 
 ## 1.1 概念
 
-- ViewPager 和 ViewPager2 看名字就知道是一代和二代的关系，他们一同被添加到 JetPack 组件库中，不过一代目前已经不推荐使用，在 JetPack 开发者文档中，是这么描述的：
-
-<img src="https://www.helloimg.com/images/2023/08/15/oSFa8q.png">
+- ViewPager 和 ViewPager2 看名字就知道是一代和二代的关系，他们一同被添加到 JetPack 组件库中，不过一代目前已经不推荐使用。
 
 ## 1.2 用途
 

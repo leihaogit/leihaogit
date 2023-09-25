@@ -2,7 +2,7 @@
 title: 'Navigation 组件使用示例'
 date: '2023-05-13'
 description: 'Android Jetpack 组件之 Navigation'
-cover: 'https://www.helloimg.com/images/2023/05/13/oxuaj9.png'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxuaj9.png'
 categories:
 
 - 编程开发
@@ -64,9 +64,7 @@ class HomeFragment : Fragment() {
 }
 ```
 - 生成的多余内容可以删掉，只保留 onCreateView 即可。我这里使用了 ViewBinding，也可以使用 DataBinding 或者就 findViewById 都行。
-- 布局文件非常简单，两个页面都放置一个 TextView 和 一个 Button 即可。如下图：
-
-<img src="https://www.helloimg.com/images/2023/05/13/oxur3M.png" width="30%">
+- 布局文件非常简单，两个页面都放置一个 TextView 和 一个 Button 即可。
 
 ## 2.3 创建导航图(Navigation Graph)
 
@@ -74,22 +72,14 @@ class HomeFragment : Fragment() {
 - 创建： res -> new -> Android Resource File
 - 名称可以任意取一个满足要求的即可，这里取 my_nav.xml，重要的是资源类型 Resource Type，选择`Navigation`。
 
-<img src="https://www.helloimg.com/images/2023/05/13/oxuVMP.png">
-
-- 导入刚才创建的 Fragment：
-
-<img src="https://www.helloimg.com/images/2023/05/13/oxy3p1.png">
+- 导入刚才创建的 Fragment。
 
 - `tips`: 如果发现主页不是 HomeFragment，可以点击左侧Component Tree中的 HomeFragment，然后右键选择Set as Start Destination 设置其为主页。更多的设置项可以自己探索。
-
-<img src="https://www.helloimg.com/images/2023/05/13/oE5kD6.png" width="30%">
 
 ## 2.4 建立导航图与 NavHostFragment 的关联
 
 - 在我们的宿主 Activity 的布局页面中，插入一个 NavHostFragment 布局控件：
-- 在弹出框中选择我们刚才创建好的Navigation Graph，即 my_nav.xml，并将其命名为 fragment (可使用默认名称)，完成后效果如下：
-
-<img src="https://www.helloimg.com/images/2023/05/13/oE5RtE.jpg">
+- 在弹出框中选择我们刚才创建好的Navigation Graph，即 my_nav.xml，并将其命名为 fragment (可使用默认名称)。
 
 ## 2.5 使用 NavController 完成跳转
 
@@ -128,8 +118,6 @@ class HomeFragment : Fragment() {
 
 - 现在已经可以通过点击按钮实现 Fragment 跳转了，现在需要实现 ActionBar 栏的点击返回箭头实现返回主页的功能。
 
-<img src="https://www.helloimg.com/images/2023/05/13/oxygB1.jpg" width="30%">
-
 - 在 Activity 中添加以下代码：
 ```kotlin
 class NavigationActivity : AppCompatActivity() {
@@ -158,11 +146,8 @@ class NavigationActivity : AppCompatActivity() {
     }
 }
 ```
-- 实现的效果：
 
-<img src="https://www.helloimg.com/images/2023/05/13/oxyDKc.gif"  width="30%">
-
-- 目前为止，就实现了两个 Fragment 之间的随意切换，再也不用频繁的进行 Fragment 事务的处理了！
+- 到此，就实现了两个 Fragment 之间的随意切换，再也不用频繁的进行 Fragment 事务的处理了！
 - 使用 Navigation 这种方式，使得添加 Fragment 非常简单，还可以自由的传递数据、设置跳转动画效果等等。
 
 # 三、总结

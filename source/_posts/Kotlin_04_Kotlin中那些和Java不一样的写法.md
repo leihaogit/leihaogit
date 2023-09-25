@@ -2,7 +2,7 @@
 title: 'Kotlin 中那些和 Java 不一样的写法'
 date: '2023-07-24'
 description: '总结一下 Kotlin 和 Java 在语法、集合数组、流程控制等方面的差异。'
-cover: 'https://www.helloimg.com/images/2023/07/24/oA6jWM.png'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oA6jWM.png'
 categories:
 
 - 编程开发
@@ -487,8 +487,6 @@ println(dayName)
 ```
 
 - 还是那么的简洁、优雅。
-
-<img src="https://www.helloimg.com/images/2023/07/24/oA8SkC.jpg" width="30%">
 
 # 四、总结
 

@@ -2,7 +2,7 @@
 title: '初识 Kotlin'
 date: '2023-04-08'
 description: 'Kotlin 是一门基于 Java 平台且运行于 JVM 上的现代化编程语言。它在保留 Java 语言优势的同时，借鉴了其他编程语言的特性，如 Swift、Scala 等，使得 Kotlin 具有更简洁、安全和高效的编程体验。'
-cover: 'https://www.helloimg.com/images/2023/05/02/oqTWxn.jpg'
+cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/8076fbdd283d34cfd1b67d534375c513.jpeg'
 categories:
 
 - 编程开发
@@ -185,8 +185,6 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
 4. **常用函数式操作符**
 
 - Kotlin 提供了一些常用的函数式操作符来简化代码，例如 map、reduce、fold 等。这些操作符可以帮助我们更加方便地对集合进行处理，提高开发效率。
-  
-<img src="https://www.helloimg.com/images/2023/07/19/oA2JBv.jpg">
 
 # 二、 Kotlin 的应用场景
 

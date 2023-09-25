@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: https://www.helloimg.com/images/2023/07/20/oA9Cz6.gif
+  logo: https://raw.githubusercontent.com/leihaogit/image-host/main/bixin.gif
   display_title: true
   fixed: false # fixed navigation bar
 
@@ -35,11 +35,11 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://www.helloimg.com/images/2023/06/24/o4GZXR.png
+favicon: https://raw.githubusercontent.com/leihaogit/image-host/main/blogging.png
 
 # Avatar (頭像)
 avatar:
-  img: https://www.helloimg.com/images/2023/07/06/o4IV9P.jpg
+  img: https://raw.githubusercontent.com/leihaogit/image-host/main/o4IV9P.jpg
   effect: false
 
 # Disable all banner image
@@ -192,7 +192,7 @@ post_pagination: 1
 noticeOutdate:
   enable: true
   style: flat # style: simple/flat
-  limit_day: 500 # When will it be shown
+  limit_day: 365 # When will it be shown
   position: top # position: top/bottom
   message_prev: 本篇文章距离上次更新已有
   message_next: 天，内容可能已经过时。
@@ -202,7 +202,7 @@ noticeOutdate:
 footer:
   owner:
     enable: true
-    since: 2022
+    since: 2023
   custom_text: 世界上只有一种真正的英雄主义，就是认清了生活的真相后还依然热爱它。
   copyright: false # Copyright of theme and framework
 

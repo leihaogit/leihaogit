@@ -2,7 +2,7 @@
 title: 'Kotlin 中的空安全设计详解'
 date: '2023-07-19'
 description: '之前对 Kotlin 的基本语法、变量声明、空安全设计和兼容性做了笼统的介绍，今天对其中的空安全设计做一个详细的剖析。'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oAMLZr.jpg'
+cover: 'https://z1.ax1x.com/2023/09/25/pP7y0zt.jpg'
 categories:
 
 - 编程开发

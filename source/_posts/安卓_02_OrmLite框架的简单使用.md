@@ -2,7 +2,7 @@
 title: 'OrmLite 框架的简单使用'
 date: '2023-04-19'
 description: '介绍如何使用OrmLite框架对SQLite数据库进行管理'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/7fe62a205607a2883501bc1b711c73d5.jpg'
+cover: 'https://z1.ax1x.com/2023/09/26/pP7jBpn.jpg'
 categories:
 
 - 数据库

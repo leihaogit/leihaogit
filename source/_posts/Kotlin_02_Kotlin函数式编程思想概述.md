@@ -2,7 +2,7 @@
 title: 'Kotlin 函数式编程思想概述'
 date: '2023-04-10'
 description: '函数式编程是一种以函数为基础、抽象和组合计算单元的编程范式。'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxuwrS.webp'
+cover: 'https://z1.ax1x.com/2023/09/26/pP7jdYj.jpg'
 categories:
 
 - 编程开发

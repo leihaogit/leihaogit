@@ -2,7 +2,7 @@
 title: 'Java集合框架体系概述'
 date: '2023-07-03'
 description: '介绍 Java 编程语言中的集合框架，包括列表、集合、队列、映射等。'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/o42YST.webp'
+cover: 'https://z1.ax1x.com/2023/09/26/pP7jakQ.png'
 categories:
 
 - 编程开发

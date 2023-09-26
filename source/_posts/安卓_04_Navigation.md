@@ -2,7 +2,7 @@
 title: 'Navigation 组件使用示例'
 date: '2023-05-13'
 description: 'Android Jetpack 组件之 Navigation'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxuaj9.png'
+cover: 'https://z1.ax1x.com/2023/09/26/pP7jr60.png'
 categories:
 
 - 编程开发

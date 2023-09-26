@@ -2,7 +2,7 @@
 title: 'ViewPager 与 ViewPager2 的使用示例'
 date: '2023-08-15'
 description: '介绍如何使用 ViewPager + BottomNavigationView 实现底部导航，ViewPager2 + TabLayout 实现顶部导航。'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oSFPMc.png'
+cover: 'https://z1.ax1x.com/2023/09/25/pP7yp5j.png'
 categories:
 
 - 编程开发

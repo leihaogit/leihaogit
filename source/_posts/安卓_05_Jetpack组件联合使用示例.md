@@ -2,7 +2,7 @@
 title: 'Jetpack 组件联合使用示例'
 date: '2023-06-27'
 description: '总结目前学过的 Jetpack 组件，并使用他们写一个口算练习App'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/oxIXog.jpg'
+cover: 'https://z1.ax1x.com/2023/09/26/pP7jDlq.jpg'
 categories:
 
 - 编程开发

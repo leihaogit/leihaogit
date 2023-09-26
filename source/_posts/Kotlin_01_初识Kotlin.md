@@ -2,7 +2,7 @@
 title: '初识 Kotlin'
 date: '2023-04-08'
 description: 'Kotlin 是一门基于 Java 平台且运行于 JVM 上的现代化编程语言。它在保留 Java 语言优势的同时，借鉴了其他编程语言的特性，如 Swift、Scala 等，使得 Kotlin 具有更简洁、安全和高效的编程体验。'
-cover: 'https://raw.githubusercontent.com/leihaogit/image-host/main/8076fbdd283d34cfd1b67d534375c513.jpeg'
+cover: 'https://z1.ax1x.com/2023/09/26/pP7jdYj.jpg'
 categories:
 
 - 编程开发

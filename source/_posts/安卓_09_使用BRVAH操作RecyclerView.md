@@ -18,8 +18,7 @@ tags:
 
 ## 1.1 BRVAH
 
-- BRVAH 也就是 [BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper) 的缩写，是目前 GitHub 上拥有
-  23.8k stars 的一个很受欢迎的开源项目，旨在精简我们对 Recyclerview 的操作。
+- BRVAH 也就是 [BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper) 的缩写，是目前 GitHub 上拥有 23.8k stars 的一个很受欢迎的开源项目，旨在精简我们对 Recyclerview 的操作。
 - Recyclerview 作为安卓开发者最常用的控件之一，功能十分强大，可以显示动态的列表、网格以及瀑布流数据。但是相应的使用难度也就有所上升，它不能像普通控件一样拖到界面上就可以使用了，还需要专门设置数据适配器、布局管理器等等。
 
 ## 1.2 BaseQuickAdapter
@@ -139,9 +138,7 @@ binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
 - 看上面适配器的代码可以发现，代码量几乎是没什么变化的，那这个`BaseQuickAdapter`好在哪里呢？
 - 首先我们能感觉到 BaseQuickAdapter<T,VH> 好像是个加强版的 ListAdapter<T,VH>，因为他也是通过 submitList 来提交数据，只是少了一个 DiffUtil.ItemCallback<T>？。
-- 其实不是的，我们看源码能发现，BaseQuickAdapter 其实是继承自 RecyclerView.Adapter 的，submitList
-  只是其实现的一个扩展方法而已，如果我们要实现自定义的比较逻辑来提高性能，需要用另一个适配器：[BaseDifferAdapter](https://github.com/CymChad/BaseRecyclerViewAdapterHelper/wiki/BaseDifferAdapter)
-  .
+- 其实不是的，我们看源码能发现，BaseQuickAdapter 其实是继承自 RecyclerView.Adapter 的，submitList 只是其实现的一个扩展方法而已，如果我们要实现自定义的比较逻辑来提高性能，需要用另一个适配器：[BaseDifferAdapter](https://github.com/CymChad/BaseRecyclerViewAdapterHelper/wiki/BaseDifferAdapter)
 - 参考源码：
 
 ```kotlin

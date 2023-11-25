@@ -1,7 +1,7 @@
 ---
 title: '使用 Paging2 实现按需加载功能'
 date: '2023-11-25'
-description: 'Paging2 虽然已经被 Paging3 替代，但我们依然可以通过它了解到谷歌对于滚动列表的性能和用户体验方面的考虑'
+description: 'Paging2 虽然已经被 Paging3 替代，但我们依然可以通过它来了解谷歌对于滚动列表的性能和用户体验方面的思考'
 cover: 'https://z1.ax1x.com/2023/11/25/piwjyXq.jpg'
 categories:
 

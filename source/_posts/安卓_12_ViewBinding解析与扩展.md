@@ -45,7 +45,7 @@ android {
 ```kotlin
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityMainBinding;
+    private lateinit var binding:ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -285,7 +285,7 @@ inline fun <reified VB : ViewBinding> Activity.viewBinding() = object : Lazy<VB>
 ```kotlin
     @NonNull
     public static ActivityMainBinding inflate(@NonNull LayoutInflater inflater) {
-        return inflate(inflater, null, false);
+        return inflate(inflater, null, false)
     }
 ```
 

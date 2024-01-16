@@ -1,6 +1,6 @@
 ---
 title: '雷跳跳'
-date: '2024-01-15'
+date: '2024-01-17'
 description: '雷跳跳使用说明'
 cover: 'https://s11.ax1x.com/2024/01/16/pFFU69U.png'
 categories:

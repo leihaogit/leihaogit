@@ -1,6 +1,6 @@
 ---
 title: '雷跳跳'
-date: '2024-01-17'
+date: '2024-01-16'
 description: '雷跳跳使用说明'
 cover: 'https://s11.ax1x.com/2024/01/16/pFFU69U.png'
 categories:
@@ -17,9 +17,9 @@ tags:
 
 # 雷跳跳
 
-<img src="https://s11.ax1x.com/2024/01/16/pFFU69U.png" width="25%">
+<img src="https://s11.ax1x.com/2024/01/16/pFFU69U.png" width="25%"><img src="https://i.postimg.cc/5yHL9KBw/leitt.png">
 
-雷跳跳基于安卓的 Accessibility 即"无障碍服务"，通过无障碍服务可以获取屏幕内容，从而检测广告并帮助用户自动跳过。
+[雷跳跳](https://github.com/leihaogit/leitt)基于安卓的 Accessibility 即"无障碍服务"，通过无障碍服务可以获取屏幕内容，从而检测广告并帮助用户自动跳过。
 无障碍权限本身风险较大，但是您完全不用担心隐私问题：
 **`本程序为开源程序，不联网，不需要存储权限，不收集或上传任何信息！绝对保证您的信息安全！`**
 

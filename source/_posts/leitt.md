@@ -17,7 +17,7 @@ tags:
 
 # 雷跳跳
 
-<img src="https://i.postimg.cc/5yHL9KBw/leitt.png" width="25%">
+<img src="https://i.postimg.cc/5yHL9KBw/leitt.png" width="30%">
 
 [雷跳跳](https://github.com/leihaogit/leitt)基于安卓的 Accessibility 即"无障碍服务"，通过无障碍服务可以获取屏幕内容，从而检测广告并帮助用户自动跳过。
 无障碍权限本身风险较大，但是您完全不用担心隐私问题：

@@ -19,7 +19,7 @@ tags:
 
 ## 1.1 前言
 
-- 在上一篇文章[使用 Paging2 实现按需加载功能](https://www.leihao168.top/2023/11/25/%E5%AE%89%E5%8D%93_10_Paging2/)中，介绍了如何使用 paging2 + Room 从本地获取数据，今天就是用最新的 Paging3 来进行一个网络数据的分页加载。
+- 在上一篇文章[使用 Paging2 实现按需加载功能](https://www.leihao168.top/2023/11/24/Paging2/)中，介绍了如何使用 paging2 + Room 从本地获取数据，今天就是用最新的 Paging3 来进行一个网络数据的分页加载。
 - Demo 使用到的技术包含 Paging3、Retrofit、Coroutines、Flow 等，有不熟悉的同学可以先去了解一下，这里不再对其他几个库做详细说明。
 
 ## 1.2 与 Paging2 的区别

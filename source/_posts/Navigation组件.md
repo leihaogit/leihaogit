@@ -1,5 +1,5 @@
 ---
-title: 'Navigation 组件使用示例'
+title: 'Navigation 组件'
 date: '2023-05-13'
 description: 'Android Jetpack 组件之 Navigation'
 cover: 'https://z1.ax1x.com/2023/09/26/pP7jr60.png'
